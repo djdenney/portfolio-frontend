@@ -40,6 +40,7 @@ export async function subscription(email, signal) {
 export async function message(messageData, signal) {
     console.log(messageData)
     const url = `${API_BASE_URL}/messages`;
+    console.log(url)
     const options = {
         method: "POST",
         headers,
