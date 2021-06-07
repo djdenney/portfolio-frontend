@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ErrorAlert from '../../utilities/ErrorAlert'
 import SuccessMessage from '../../utilities/SuccessMessage'
 import { subscription } from '../../utilities/api'
@@ -8,6 +8,16 @@ function Footer() {
     const [email, setEmail] = useState('')
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
+
+    useEffect(() => {
+        const resetMessage = setTimeout(() => clearMessage(), 5000)
+        return () => clearTimeout(resetMessage)
+    })
+
+    function clearMessage() {
+        setError(null)
+        setSuccess(null)
+    }
 
     function handleChange(e) {
         const value = e.target.value

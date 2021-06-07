@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ErrorAlert from '../utilities/ErrorAlert'
 import { message } from '../utilities/api'
 import SuccessMessage from '../utilities/SuccessMessage'
@@ -14,13 +14,22 @@ function Contact() {
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
 
+    useEffect(() => {
+        const resetMessage = setTimeout(() => clearMessage(), 5000)
+        return () => clearTimeout(resetMessage)
+    })
+
+    function clearMessage() {
+        setError(null)
+        setSuccess(null)
+    }
+
     function handleChange(e) {
         const value = e.target.value
         setFormData({
             ...formData,
             [e.target.name]: value
         })
-        console.log(formData)
     }
 
     async function handleSubmit(e) {
@@ -36,6 +45,7 @@ function Contact() {
             console.error(error)
         }
     }
+
     return (
         <div className='container-fluid col-md-8' style={{marginTop: '56px'}}>
             <ErrorAlert error={error} />
