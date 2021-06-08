@@ -1,4 +1,5 @@
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+const API_BASE_URL =
+    process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
 
 const headers = new Headers();
 headers.append("Content-Type", "application/json");
@@ -38,14 +39,14 @@ export async function subscription(email, signal) {
 }
 
 export async function message(messageData, signal) {
-    console.log(messageData)
+    console.log(messageData);
     const url = `${API_BASE_URL}/messages`;
-    console.log(url)
+    console.log(url);
     const options = {
         method: "POST",
         headers,
         body: JSON.stringify({ data: messageData }),
         signal,
     };
-    return await fetchJson(url, options)
+    return await fetchJson(url, options);
 }

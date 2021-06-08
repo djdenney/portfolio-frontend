@@ -88,12 +88,12 @@ function Contact() {
                         onChange={(e) => handleChange(e)}
                     />
                 </div>
-                <button 
-                    className="btn btn-primary g-recaptcha" 
+                <button
+                    className="btn btn-primary g-recaptcha"
                     type="submit"
-                    data-sitekey='6LcG5xwbAAAAAG7lZj-4_o_45wAiyvd9hb7WIdjp'
-                    data-callback='onSubmit'
-                    data-action='submit'
+                    data-sitekey="6LcG5xwbAAAAAG7lZj-4_o_45wAiyvd9hb7WIdjp"
+                    data-callback="onSubmit"
+                    data-action="submit"
                 >
                     Send
                 </button>
