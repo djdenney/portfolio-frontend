@@ -50,7 +50,7 @@ function Footer() {
             </section>
 
             <section className="">
-                    <form className="row d-flex justify-content-center" onSubmit={(e) => handleSubmit(e)}>
+                    <form id='recaptcha-form' className="row d-flex justify-content-center" onSubmit={(e) => handleSubmit(e)}>
                         <div className="d-grid col-md-5 col-12 form-group mb-4 gap-4">
                             <ErrorAlert error={error} />
                             <SuccessMessage success={success} />
@@ -66,7 +66,10 @@ function Footer() {
                             />
                             <button
                                 type="submit"
-                                className="btn btn-outline-light mb-4"
+                                className="btn btn-outline-light mb-4 g-recaptcha"
+                                data-sitekey='6LcG5xwbAAAAAG7lZj-4_o_45wAiyvd9hb7WIdjp'
+                                data-callback='onSubmit'
+                                data-action='submit'
                             >
                                 Submit
                             </button>
