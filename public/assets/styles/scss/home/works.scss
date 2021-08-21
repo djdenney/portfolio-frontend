@@ -1,72 +1,71 @@
-
 // All styles for Works
 
-#portfolioSection{
+#portfolioSection {
     padding: 200px 0;
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         padding: 100px 0;
     }
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         padding: 400px 0;
     }
-    h2{
+    h2 {
         margin-bottom: 125px;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             line-height: 1.6;
         }
-        @media (max-width: 567px){
+        @media (max-width: 567px) {
             margin-bottom: 50px;
         }
     }
-    .portfolio-nav{
+    .portfolio-nav {
         margin-bottom: 75px;
-        a{
+        a {
             margin-right: 35px;
             color: #aaa;
             text-transform: capitalize;
             cursor: pointer;
-            &:after{
+            &:after {
                 content: "";
                 height: 1px;
                 width: 0%;
-                background: #285BD4;
+                background: #faf33e;
                 position: absolute;
                 left: auto;
                 right: 0;
                 bottom: -3px;
-                transition: .25s cubic-bezier(.75,.25,.25,.75);
+                transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
             }
-            &:hover{
+            &:hover {
                 color: #fff;
-                transition: .25s cubic-bezier(.75,.25,.25,.75);
-                &:after{
+                transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                &:after {
                     width: 100%;
                     left: 0;
                     right: auto;
-                    transition: .25s cubic-bezier(.75,.25,.25,.75);
+                    transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                 }
             }
-            &.active{
+            &.active {
                 color: #fff !important;
                 outline: 0;
                 text-decoration: none;
-                transition: .25s cubic-bezier(.75,.25,.25,.75);
-                &:after{
+                transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                &:after {
                     width: 100%;
                     right: auto;
                     left: 0;
-                    transition: .25s cubic-bezier(.75,.25,.25,.75);
+                    transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                 }
             }
         }
     }
-    .portfolio-row{
+    .portfolio-row {
         margin: 0 -35px;
-        .portfolio-box{
+        .portfolio-box {
             margin-bottom: 70px;
             padding: 0 35px;
             position: relative;
-            .cancel-anchor{
+            .cancel-anchor {
                 width: 100%;
                 height: 100%;
                 top: 0;
@@ -75,35 +74,35 @@
                 z-index: 999;
                 display: none;
             }
-            a{
+            a {
                 color: #fff;
             }
-            .portfolio-image{
+            .portfolio-image {
                 opacity: 1;
-                transition: .4s cubic-bezier(.75,.25,.25,.75);
+                transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                 overflow: hidden;
                 position: relative;
                 cursor: pointer;
-                img{
+                img {
                     max-width: 100%;
                     max-height: 100%;
                     transform: scale(1);
                     opacity: 1;
-                    transition: .4s cubic-bezier(.75,.25,.25,.75);
+                    transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                 }
-                .dark-bg{
+                .dark-bg {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     left: 0;
                     top: 0;
-                    background: rgba(0, 0, 0, .7);
+                    background: rgba(0, 0, 0, 0.7);
                     opacity: 0;
                     z-index: 100;
-                    transition: .4s cubic-bezier(.75,.25,.25,.75);
+                    transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                 }
-                .portfolio-text{
-                    h3{
+                .portfolio-text {
+                    h3 {
                         font-weight: 300;
                         font-size: 1.3em;
                         position: absolute;
@@ -113,17 +112,17 @@
                         opacity: 0;
                         transform: translateX(10px);
                         will-change: transform;
-                        transition: .4s cubic-bezier(.75,.25,.25,.75);
-                        @media (max-width: 768px){
+                        transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                        @media (max-width: 768px) {
                             font-size: 1.1em;
                         }
                     }
-                    h6{
+                    h6 {
                         color: #aaa;
                         font-weight: 300;
-                        font-size: .8em;
+                        font-size: 0.8em;
                         transform: translateX(10px);
-                        letter-spacing: .3px;
+                        letter-spacing: 0.3px;
                         position: absolute;
                         text-transform: capitalize;
                         left: 30px;
@@ -131,58 +130,64 @@
                         z-index: 101;
                         opacity: 0;
                         will-change: transform;
-                        transition: .4s cubic-bezier(.75,.25,.25,.75);
+                        transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                     }
                 }
-                &:hover{
-                    img{
+                &:hover {
+                    img {
                         transform: scale(1.1);
-                        transition: .4s cubic-bezier(.75,.25,.25,.75);
+                        transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                     }
-                    .dark-bg{
+                    .dark-bg {
                         opacity: 1;
-                        transition: .4s cubic-bezier(.75,.25,.25,.75);
+                        transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                     }
-                    .portfolio-text{
-                        h3{
+                    .portfolio-text {
+                        h3 {
                             opacity: 1;
                             transform: translateX(0px);
-                            transition: .4s cubic-bezier(.75,.25,.25,.75);
+                            transition: 0.4s
+                                cubic-bezier(0.75, 0.25, 0.25, 0.75);
                         }
-                        h6{
+                        h6 {
                             opacity: 1;
                             transform: translateX(0px);
-                            transition: .4s cubic-bezier(.75,.25,.25,.75);
+                            transition: 0.4s
+                                cubic-bezier(0.75, 0.25, 0.25, 0.75);
                         }
                     }
                 }
             }
-            &.portfolio-hidden{
-                .cancel-anchor{
+            &.portfolio-hidden {
+                .cancel-anchor {
                     display: block;
                 }
-                .portfolio-image{
-                    opacity: .15 !important;
-                    transition: all .3s ease-in-out;
-                    &:hover{
-                        img{
+                .portfolio-image {
+                    opacity: 0.15 !important;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        img {
                             transform: scale(1);
-                            transition: .4s cubic-bezier(.75,.25,.25,.75);
+                            transition: 0.4s
+                                cubic-bezier(0.75, 0.25, 0.25, 0.75);
                         }
-                        .dark-bg{
+                        .dark-bg {
                             opacity: 0;
-                            transition: .4s cubic-bezier(.75,.25,.25,.75);
+                            transition: 0.4s
+                                cubic-bezier(0.75, 0.25, 0.25, 0.75);
                         }
-                        .portfolio-text{
-                            h3{
+                        .portfolio-text {
+                            h3 {
                                 opacity: 0;
                                 transform: translateX(0px);
-                                transition: .4s cubic-bezier(.75,.25,.25,.75);
+                                transition: 0.4s
+                                    cubic-bezier(0.75, 0.25, 0.25, 0.75);
                             }
-                            h6{
+                            h6 {
                                 opacity: 0;
                                 transform: translateX(0px);
-                                transition: .4s cubic-bezier(.75,.25,.25,.75);
+                                transition: 0.4s
+                                    cubic-bezier(0.75, 0.25, 0.25, 0.75);
                             }
                         }
                     }

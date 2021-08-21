@@ -1,146 +1,145 @@
-
 // All general stylings
 
-html{
+html {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-body{
-    background: #050505;
-    color: #fff;
-    font-family: "Inter", sans-serif;
+body {
+    background: #322f37;
+    color: #eefcee;
+    font-family: "Roboto Slab", serif;
     font-size: 16px;
     overflow-x: hidden !important;
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         font-size: 20px;
     }
 }
 
-.container-fluid{
+.container-fluid {
     padding: 0 5vw;
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         padding: 0 10vw;
     }
 }
 
-.container-fluid-small{
+.container-fluid-small {
     padding: 0 15vw;
-    @media (max-width: 1600px){
+    @media (max-width: 1600px) {
         padding: 0 10vw;
     }
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         padding: 0 20vw;
     }
 }
 
-.big-title{
+.big-title {
     font-size: 2.5em;
     font-weight: 300;
-    letter-spacing: -.5px;
-    color: #fff;
+    letter-spacing: -0.5px;
+    color: #eefcee;
     line-height: 1.6;
-    @media(max-width: 1400px){
+    @media (max-width: 1400px) {
         font-size: 2em;
     }
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         font-size: 1.5em;
         padding-right: 0px;
     }
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         line-height: 2;
     }
 }
 
-.sub-title{
+.sub-title {
     font-weight: 300;
-    letter-spacing: .5px;
-    font-size: .9em;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
 }
 
-p{
+p {
     font-size: 1.1em;
     line-height: 1.7;
-    color: #b6b6b6;
+    color: #eefcee;
     font-weight: 300;
-    @media (max-width: 768px){
-        font-size: .9em;
+    @media (max-width: 768px) {
+        font-size: 0.9em;
     }
-    &.fade-p{
-        font-size: .9em;
+    &.fade-p {
+        font-size: 0.9em;
         color: #888;
     }
-    &.big-p{
+    &.big-p {
         font-size: 1.3em;
         line-height: 1.8;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             font-size: 1.1em;
         }
     }
 }
 
-ul{
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    li{
+    li {
         font-weight: 300;
         line-height: 2.4;
-        letter-spacing: .2px;
-        font-size: .9em;
-        color: #fff;
+        letter-spacing: 0.2px;
+        font-size: 0.9em;
+        color: #eefcee;
     }
 }
 
-a{
-    transition: .25s cubic-bezier(.75,.25,.25,.75);
+a {
+    transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
     position: relative;
-    @media (max-width: 567px){
-        font-size: .9em;
+    @media (max-width: 567px) {
+        font-size: 0.9em;
     }
-    &:after{
+    &:after {
         content: "";
         height: 1px;
         width: 100%;
-        background: #285BD4;
+        background: #faf33e;
         position: absolute;
         left: 0;
         right: auto;
         bottom: -3px;
-        transition: .25s cubic-bezier(.75,.25,.25,.75);
+        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
     }
-    &:hover{
-        color: #fff !important;
+    &:hover {
+        color: #eefcee !important;
         outline: 0;
         text-decoration: none;
-        transition: .25s cubic-bezier(.75,.25,.25,.75);
-        &:after{
+        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        &:after {
             width: 0%;
             right: 0;
             left: auto;
-            transition: .25s cubic-bezier(.75,.25,.25,.75);
+            transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
         }
     }
-    &:focus{
+    &:focus {
         outline: 0;
         text-decoration: none;
     }
-    &.active{
-        color: #fff !important;
+    &.active {
+        color: #eefcee !important;
         outline: 0;
         text-decoration: none;
-        transition: .25s cubic-bezier(.75,.25,.25,.75);
-        &:after{
+        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        &:after {
             width: 100%;
             right: auto;
             left: 0;
-            transition: .25s cubic-bezier(.75,.25,.25,.75);
+            transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
         }
     }
 }
 
-.loading-overlay{
+.loading-overlay {
     position: fixed;
     top: 0;
     right: 0;
@@ -152,22 +151,22 @@ a{
 
 @keyframes color-animation {
     0% {
-       background: #ff0000;
+        background: #ff0000;
     }
     25% {
-        background: #ffff00;
+        background: #eefcee;
     }
     50% {
-       background: #00ff3b;
-    } 
+        background: #00ff3b;
+    }
     100% {
-       background: #0000ff;
-    } 
+        background: #0000ff;
+    }
 }
 
 .colorful-bg {
     position: absolute;
-    opacity: .0;
+    opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -175,16 +174,16 @@ a{
     animation: color-animation 3s infinite linear alternate;
 }
 
-.dark-bg{
+.dark-bg {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
-.scroll-down{
+.scroll-down {
     position: fixed;
     bottom: 4vw;
     right: 5vw;
@@ -193,37 +192,37 @@ a{
     justify-content: space-between;
     align-items: center;
     opacity: 1;
-    @media(max-width: 768px){
+    @media (max-width: 768px) {
         right: 2vw;
     }
-    h5{
-        font-size: .9em;
+    h5 {
+        font-size: 0.9em;
         font-weight: 300;
         margin-right: 15px;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
         margin-top: 5px;
         color: #888;
         opacity: 1;
-        transition: .5s cubic-bezier(.75,.25,.25,.75);
-        @media (max-width: 992px){
+        transition: 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        @media (max-width: 992px) {
             margin-right: 10px;
         }
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             margin-right: 5px;
         }
     }
-    a{
+    a {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         font-size: 16px !important;
 
-        &:after{
+        &:after {
             display: none;
         }
     }
-    .scroll-arrow{
+    .scroll-arrow {
         height: 39px;
         width: 39px;
         border: 1px solid #222;
@@ -232,15 +231,17 @@ a{
         position: relative;
         padding: 0;
         opacity: 1;
-        transition: transform .8s cubic-bezier(.75,.25,.25,.75), border .4s cubic-bezier(.75,.25,.25,.75), opacity .5s cubic-bezier(.75,.25,.25,.75);
-        @media (max-width:992px){
-            transform: rotate(90deg) scale(.8);
+        transition: transform 0.8s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+            border 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+            opacity 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        @media (max-width: 992px) {
+            transform: rotate(90deg) scale(0.8);
         }
-        @media (max-width:567px){
-            transform: rotate(90deg) scale(.7);
+        @media (max-width: 567px) {
+            transform: rotate(90deg) scale(0.7);
             border: 1px solid #656565;
         }
-        .line{
+        .line {
             position: relative;
             right: -13px;
             top: 1px;
@@ -250,54 +251,57 @@ a{
             display: inline-block;
             transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
         }
-        .line-1{
-          width: 9px;
-          position: relative;
-          right: -6px;
-          transform: rotate(45deg);
-          top: -2px;
+        .line-1 {
+            width: 9px;
+            position: relative;
+            right: -6px;
+            transform: rotate(45deg);
+            top: -2px;
         }
-        .line-2{
-          width: 9px;
-          position: relative;
-          right: 3px;
-          transform: rotate(-45deg);
-          top: 4px;
-        }
-    }
-    &.scroll-top{
-        h5{
-            opacity: 0;
-            transition: .4s cubic-bezier(.75,.25,.25,.75);
-        }
-        .scroll-arrow{
-            opacity: 0;
-            transition: .4s cubic-bezier(.75,.25,.25,.75);
-            @media (max-width:992px){
-                transform: scale(.8);
-            }
-            @media (max-width:567px){
-                transform: scale(.7);
-            }
+        .line-2 {
+            width: 9px;
+            position: relative;
+            right: 3px;
+            transform: rotate(-45deg);
+            top: 4px;
         }
     }
-    &.scroll-top-active{
-        .scroll-arrow{
+    &.scroll-top {
+        h5 {
+            opacity: 0;
+            transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        }
+        .scroll-arrow {
+            opacity: 0;
+            transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+            @media (max-width: 992px) {
+                transform: scale(0.8);
+            }
+            @media (max-width: 567px) {
+                transform: scale(0.7);
+            }
+        }
+    }
+    &.scroll-top-active {
+        .scroll-arrow {
             opacity: 1;
             transform: rotate(-90deg);
-            transition: transform .8s cubic-bezier(.75,.25,.25,.75), border .4s cubic-bezier(.75,.25,.25,.75), opacity .5s cubic-bezier(.75,.25,.25,.75);
-            @media (max-width:992px){
-                transform: rotate(-90deg) scale(.8);
+            transition: transform 0.8s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+                border 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+                opacity 0.5s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+            @media (max-width: 992px) {
+                transform: rotate(-90deg) scale(0.8);
             }
-            @media (max-width:567px){
-                transform: rotate(-90deg) scale(.7);
+            @media (max-width: 567px) {
+                transform: rotate(-90deg) scale(0.7);
             }
-            &:hover{
-                border: 1px solid #285BD4;
-                transition: transform .8s cubic-bezier(.75,.25,.25,.75), border .4s cubic-bezier(.75,.25,.25,.75);
-                .line{
-                    background: #285BD4;
-                    transition: .4s cubic-bezier(.75,.25,.25,.75);
+            &:hover {
+                border: 1px solid #faf33e;
+                transition: transform 0.8s cubic-bezier(0.75, 0.25, 0.25, 0.75),
+                    border 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                .line {
+                    background: #faf33e;
+                    transition: 0.4s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                 }
             }
         }
@@ -305,11 +309,11 @@ a{
 }
 
 .page-trans {
-  position: fixed;
-  top:0;
-  left:0;
-  background:#050505;
-  width:100vw;
-  height:100vh;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #5d737e;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
 }

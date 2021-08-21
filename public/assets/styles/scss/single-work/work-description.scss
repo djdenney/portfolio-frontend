@@ -1,65 +1,64 @@
-
 // All styles for Work Description Component
 
-#projectDescription{
-    padding: 200px 0px 150px;
-    @media (max-width: 480px){
-        padding: 100px 0;
+#projectDescription {
+    padding: 200px 0px 50px;
+    @media (max-width: 480px) {
+        padding: 100px 100px 50px;
     }
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         padding: 400px 0;
     }
-    h2{
-        @media (max-width: 1200px){
+    h2 {
+        @media (max-width: 1200px) {
             margin-bottom: 75px;
         }
-        @media (max-width: 567px){
+        @media (max-width: 567px) {
             margin-bottom: 50px;
         }
     }
-    h5{
+    h5 {
         color: #888;
-        margin-bottom: 25px; 
+        margin-bottom: 25px;
     }
-    .project-desc{
+    .project-desc {
         padding-top: 10px;
-        p.big-p{
+        p.big-p {
             padding-right: 50px;
         }
     }
-    .desc-bottom{
+    .desc-bottom {
         margin-top: 55px;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             margin-top: 10px;
             margin-bottom: 0px;
         }
-        a{
+        a {
             color: #aaa;
         }
-        p{
+        p {
             color: #888;
         }
     }
-    @media (max-width:1200px){
-        .desc-bottom-after-2{
+    @media (max-width: 1200px) {
+        .desc-bottom-after-2 {
             order: 4;
         }
-        .desc-bottom-after-1{
+        .desc-bottom-after-1 {
             order: 3;
         }
-        .desc-bottom-before-2{
+        .desc-bottom-before-2 {
             margin-top: 50px;
             margin-bottom: 50px;
             order: 2;
         }
-        .desc-bottom-before-1{
+        .desc-bottom-before-1 {
             margin-top: 50px;
             margin-bottom: 50px;
             order: 1;
         }
     }
-    @media (max-width: 992px){
-        .desc-bottom-before-2{
+    @media (max-width: 992px) {
+        .desc-bottom-before-2 {
             margin-top: 0px;
         }
     }

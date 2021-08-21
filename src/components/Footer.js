@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
-    const date = new Date().getFullYear();
-
     const socialLinks = [
         {
             name: "LinkedIn",
@@ -24,7 +22,7 @@ function Footer() {
             name: "Resume",
             url: "/images/Daniel-Denney-Resume.pdf",
             type: "download",
-        }
+        },
     ];
 
     return (
@@ -32,7 +30,9 @@ function Footer() {
             <div className="container-fluid-small">
                 <div className="row">
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 footer-title anim-bot">
-                        <h2 className="big-title">Help Me do what I Love for a Living.</h2>
+                        <h2 className="big-title">
+                            Help Me do what I Love for a Living.
+                        </h2>
                     </div>
                     <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3 footer-project anim-bot">
                         <Link to="/contact">Hire Me</Link>

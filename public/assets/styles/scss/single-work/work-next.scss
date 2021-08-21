@@ -1,26 +1,25 @@
-
 // All styles for Work Next Component
 
-#projectNext{
+#projectNext {
     padding: 150px 0px 150px 0px;
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         padding: 100px 0;
     }
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         padding: 0px 0px 150px 0px;
     }
-    .project-nav{
+    .project-nav {
         text-align: center;
-        h5{
+        h5 {
             color: #888;
             margin-bottom: 30px;
         }
-        h1{
-            a{
+        h1 {
+            a {
                 color: #aaa;
             }
         }
-        .next-grey{
+        .next-grey {
             color: #333;
         }
     }

@@ -1,29 +1,28 @@
-
 // All styles for About Text Component
 
-#aboutStory{
+#aboutStory {
     padding: 200px 0px 150px 0px;
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         padding: 100px 0;
     }
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         padding: 400px 0px;
     }
-    h2{
+    h2 {
         margin-bottom: 50px;
     }
-    .story-left{
-        @media (max-width: 1200px){
+    .story-left {
+        @media (max-width: 1200px) {
             margin-bottom: 75px;
         }
     }
-    .story-right{
+    .story-right {
         padding-top: 10px;
     }
-    .story-bottom{
+    .story-bottom {
         margin-top: 50px;
     }
-    a{
+    a {
         color: #aaa;
     }
 }

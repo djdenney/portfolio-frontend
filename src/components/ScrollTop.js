@@ -1,30 +1,30 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from "react";
 
-function ScrollTop(){
-
+function ScrollTop() {
     useEffect(() => {
         window.onscroll = () => {
-            const top = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollDown = document.getElementById('scroll-id')
-            const anchorDown = document.getElementById('a-down')
+            const top =
+                window.pageYOffset || document.documentElement.scrollTop;
+            const scrollDown = document.getElementById("scroll-id");
+            const anchorDown = document.getElementById("a-down");
 
             if (top > 1) {
-                scrollDown.classList.add('scroll-top')
-                anchorDown.href = '#heroSection'
+                scrollDown.classList.add("scroll-top");
+                anchorDown.href = "#heroSection";
             } else {
-                scrollDown.classList.remove('scroll-top')
-                anchorDown.removeAttribute('href')
+                scrollDown.classList.remove("scroll-top");
+                anchorDown.removeAttribute("href");
             }
 
-            if(top >= 1000) {
-                scrollDown.classList.add('scroll-top-active')
+            if (top >= 1000) {
+                scrollDown.classList.add("scroll-top-active");
             } else {
-                scrollDown.classList.remove('scroll-top-active')
+                scrollDown.classList.remove("scroll-top-active");
             }
-        }
-    }, [])
+        };
+    }, []);
 
-    return(
+    return (
         <div id="scroll-id" className="scroll-down">
             <h5>Scroll Down</h5>
             <div className="scroll-arrow">
@@ -35,8 +35,7 @@ function ScrollTop(){
                 </a>
             </div>
         </div>
-    )
-
+    );
 }
 
-export default ScrollTop
+export default ScrollTop;

@@ -1,123 +1,123 @@
-
 // All styles for Footer
 
-#footerSection{
+#footerSection {
     padding: 200px 0px;
-    background: #0c0c0c;
+    background: #48515b;
     position: relative;
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
         padding: 100px 0;
     }
-    @media (min-width: 2000px){
+    @media (min-width: 2000px) {
         padding: 400px 0px;
     }
-    .footer-title{
+    .footer-title {
         margin-bottom: 125px;
-        @media (max-width: 1200px){
+        @media (max-width: 1200px) {
             margin-bottom: 35px;
         }
-        h2{
+        h2 {
             line-height: 1.6;
         }
     }
-    .footer-project{
+    .footer-project {
         margin-bottom: 125px;
         padding-bottom: 23px;
         display: flex;
         align-items: flex-end;
-        @media (max-width: 1440px){
+        @media (max-width: 1440px) {
             padding-bottom: 25px;
         }
-        @media (max-width: 1200px){
+        @media (max-width: 1200px) {
             margin-bottom: 75px;
             padding-bottom: 0px;
         }
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             margin-bottom: 125px;
         }
-        a{
+        a {
             color: #aaa;
             font-weight: 400;
-            &:hover{
-                color: #fff;
+            &:hover {
+                color: #eefcee;
             }
         }
     }
-    .contact-box{
-        @media (max-width: 768px){
+    .contact-box {
+        @media (max-width: 768px) {
             margin-bottom: 50px;
         }
-        h5{
+        h5 {
             color: #888;
             margin-bottom: 25px;
         }
-        ul{
-            li{
+        ul {
+            li {
                 line-height: 2.4;
             }
         }
-        &.proceed-box{
+        &.proceed-box {
             padding-right: 60px;
         }
-        &.contact-mail{
-            @media (max-width: 1200px){
+        &.contact-mail {
+            @media (max-width: 1200px) {
                 order: 1;
             }
         }
-        &.contact-address{
-            @media (max-width: 1200px){
+        &.contact-address {
+            @media (max-width: 1200px) {
                 order: 2;
             }
         }
     }
-    .footer-menu{
-        ul{
+    .footer-menu {
+        ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            li{
+            li {
                 display: inline-block;
-                font-size: .85em;
+                font-size: 0.85em;
                 font-weight: 400;
                 margin-right: 30px;
-                a{
+                a {
                     color: #aaa;
-                    &:after{
+                    &:after {
                         width: 0;
                         left: auto;
                         right: 0;
-                        transition: .25s cubic-bezier(.75,.25,.25,.75);
+                        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
                     }
-                    &:hover{
-                        color: #fff;
-                        transition: .25s cubic-bezier(.75,.25,.25,.75);
-                        &:after{
+                    &:hover {
+                        color: #eefcee;
+                        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+                        &:after {
                             width: 100%;
                             left: 0;
                             right: auto;
-                            transition: .25s cubic-bezier(.75,.25,.25,.75);
+                            transition: 0.25s
+                                cubic-bezier(0.75, 0.25, 0.25, 0.75);
                         }
                     }
                 }
             }
         }
     }
-    .footer-offset{
-        @media (max-width: 1200px){
+    .footer-offset {
+        @media (max-width: 1200px) {
             display: none;
         }
     }
-    .copyright{
-        @media (max-width: 1200px){
+    .copyright {
+        @media (max-width: 1200px) {
             order: 3;
             margin-top: 75px;
         }
-        p{
+        p {
             display: inline-block;
-            font-size: .9em;
+            font-size: 0.9em;
             font-weight: 300;
             line-height: 2;
-            color: #b6b6b6;
+            color: #eefcee;
             margin-bottom: 50px;
         }
     }
