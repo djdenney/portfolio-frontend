@@ -1,38 +1,75 @@
-import daniel from "../images/daniel.jpeg";
+import React, { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { motion } from "framer-motion";
+
+import Hero from "../components/Hero";
+import Header from "../components/Header";
+import AboutText from "../components/AboutText";
+import Services from "../components/Services";
+import Footer from "../components/Footer";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
+    let titleAnim = useRef(null);
+    let subtitleAnim = useRef(null);
+    let tl = gsap.timeline();
+    const LoadingTransition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
+
+    useEffect(() => {
+        tl.from(subtitleAnim, {
+            y: 15,
+            opacity: 0,
+            delay: 1,
+            duration: 0.5,
+            ease: "power3.inOut",
+        })
+            .from(titleAnim, {
+                y: 15,
+                opacity: 0,
+                duration: 0.5,
+                ease: "power3.inOut",
+            })
+            .from(".scroll-down", {
+                y: 15,
+                opacity: 0,
+                duration: 0.5,
+                ease: "power3.inOut",
+            });
+    }, [tl, titleAnim, subtitleAnim]);
+
     return (
-        <div
-            className="container-fluid row justify-content-center"
-            style={{ marginTop: "56px" }}
-        >
-            <div className="col-md-8 gap-5">
-                <div className="col-md-4 d-md-block d-none float-end mx-4">
-                    <img
-                        src={daniel}
-                        className="rounded float-start w-100"
-                        alt="daniel"
-                        style={{ maxHeight: "100vh" }}
-                    />
-                </div>
-                <h1 className="mx-2 mx-md-0">
-                    aging millennial makes websites
+        <div>
+            <motion.div
+                initial={{ x: 0 }}
+                animate={{ x: "-100%" }}
+                exit={{ x: 0 }}
+                transition={LoadingTransition}
+                className="page-trans"
+            ></motion.div>
+            <Header />
+            <Hero>
+                <h6 ref={(el) => (subtitleAnim = el)} className="sub-title">
+                    I feel like calling myself a "sofware engineer" is sort of a
+                    disservice to the word "engineer"
+                </h6>
+                <h1 ref={(el) => (titleAnim = el)} className="big-title">
+                    Daniel Denney. <br /> Aging Milennial... Software Person.
                 </h1>
-                <div className="mx-2 mx-md-0">
-                    ok, so somehow i've gotta explain who i am as a person but
-                    my explanation needs to be different than my linkedin
-                    profile's 'about' section and the professional summary on my
-                    resumé. i can't exactly talk about how good i am at coding,
-                    because i have 0 years of experience and my portfolio is
-                    basically just a bunch of school projects, so when i say i
-                    know what i'm doing it probably doesn't mean much to you. i
-                    can confidently say that i know javascript, react, express,
-                    postgresql, and node. i can also confidently say that if you
-                    asked me to write a quicksort algorithm i would probably end
-                    up with some needlessly recursive stackoverflow frankenstein
-                    solution and hope prettierjs could make it look passable.
-                </div>
-            </div>
+            </Hero>
+            <AboutText />
+            <Services>
+                <h2 className="big-title">So I'm Looking for a Job.</h2>
+                <p>
+                    I am proficient in modern full stack development with
+                    ReactJS, Express, Node, and PostgreSQL, and I am always
+                    learning more.
+                </p>
+                <Link to="/contact">Hire Me</Link>
+            </Services>
+            <Footer />
         </div>
     );
 }
