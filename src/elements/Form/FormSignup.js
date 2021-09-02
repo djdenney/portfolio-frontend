@@ -15,12 +15,12 @@ const FormSignup = ({ submitForm }) => {
                     <input
                         className="form-input"
                         type="text"
-                        name="username"
+                        name="name"
                         placeholder="Name* :"
-                        value={values.username}
+                        value={values.name}
                         onChange={handleChange}
                     />
-                    {errors.username && <p>{errors.username}</p>}
+                    {errors.name && <p>{errors.name}</p>}
                 </div>
 
                 <div className="form-inputs">

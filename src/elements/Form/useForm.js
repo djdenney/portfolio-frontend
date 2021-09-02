@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 
+import { submitForm } from "../../api";
+
 const useForm = (callback, validate) => {
     const [values, setValues] = useState({
-        username: "",
+        name: "",
         email: "",
         subject: "",
         message: "",
@@ -18,12 +20,21 @@ const useForm = (callback, validate) => {
         });
     };
 
-    const handleSubmit = (e) => {
+    async function handleSubmit(e) {
         e.preventDefault();
-
-        setErrors(validate(values));
-        setIsSubmitting(true);
-    };
+        try {
+            const abortController = new AbortController();
+            setIsSubmitting(true);
+            const response = await submitForm(
+                { ...values },
+                abortController.signal
+            );
+            return response;
+        } catch (error) {
+            setErrors(validate(values));
+            console.error(error);
+        }
+    }
 
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {

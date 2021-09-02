@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import WorkDescription from "../components/WorkDescription";
 import WorkGallery from "../components/WorkGallery";
 import WorkNext from "../components/WorkNext";
+import WorkLinks from "../components/WorkLinks";
 
 import Works from "../data/Works";
 
@@ -45,10 +46,10 @@ function SingleWork() {
                 duration: 0.5,
                 ease: "power3.inOut",
             });
-    }, [tl, titleAnim, subtitleAnim]);
+    }, [titleAnim, subtitleAnim]);
 
     const { workId } = useParams();
-    const thisWork = Works.find((element) => element.id === workId);
+    const thisWork = Works.find((element) => element.id == workId);
 
     return (
         <div>
@@ -97,28 +98,10 @@ function SingleWork() {
                         ))}
                     </ul>
                 </div>
-                <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-3 desc-bottom desc-bottom-before-2 anim-right">
-                    <ul>
-                        <li>
-                            <a
-                                href={thisWork.repository}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Repository
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href={thisWork.deployment}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Deployment
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <WorkLinks
+                    repository={thisWork.repository}
+                    deployment={thisWork.deployment}
+                />
             </WorkDescription>
             <WorkGallery
                 imagesLeft={thisWork.imagesLeft}

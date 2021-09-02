@@ -4,8 +4,8 @@ const Works = [
         name: "Periodic Tables",
         category: "Scholastic",
         fixedCategory: "Scholastic",
-        image: "/assets/images/PeriodicTables.jpg",
-        background: "/assets/images/PeriodicTablesHero.jpg",
+        image: "/assets/images/PeriodicTables.png",
+        background: "/assets/images/PeriodicTablesHero.png",
         headline:
             "A Web Application for Managing Restaurant Table Reservations",
         text: [
@@ -17,16 +17,16 @@ const Works = [
         repository: "https://www.github.com/djdenney/Periodic_Tables",
         deployment:
             "https://periodic-tables-frontend-eosin.vercel.app/dashboard",
-        imagesLeft: ["PeriodicTables1.jpg", "PeriodicTables3.jpg"],
-        imagesRight: ["PeriodicTables2.jpg", "PeriodicTables4.jpg"],
+        imagesLeft: ["PeriodicTables1.png", "PeriodicTables3.png"],
+        imagesRight: ["PeriodicTables2.png", "PeriodicTables4.png"],
     },
     {
         id: 2,
         name: "Flashcard-O-Matic",
         category: "Scholastic",
         fixedCategory: "Scholastic",
-        image: "/assets/images/FlashcardOMatic.jpg",
-        background: "/assets/images/FlashcardOMaticHero.jpg",
+        image: "/assets/images/FlashcardOMatic.png",
+        background: "/assets/images/FlashcardOMaticHero.png",
         headline:
             "A Web Application for Creating and Reviewing Study Materials",
         text: [
@@ -36,17 +36,17 @@ const Works = [
         date: "March 2021",
         technology: ["React", "Bootstrap"],
         repository: "https://www.github.com/djdenney/Flashcard-O-Matic",
-        deployment: "https://flashcard-o-matic-gamma.vercel.app/",
-        imagesLeft: ["FlashcardOMatic1.jpg", "FlashcardOMatic3.jpg"],
-        imagesRight: ["FlashcardOMatic2.jpg", "FlashcardOMatic4.jpg"],
+        deployment: "",
+        imagesLeft: ["FlashcardOMatic1.png", "FlashcardOMatic3.png", "FlashcardOMatic5.png"],
+        imagesRight: ["FlashcardOMatic2.png", "FlashcardOMatic4.png", "FlashcardOMatic6.png"],
     },
     {
         id: 3,
         name: "WeLoveMovies",
         category: "Scholastic",
         fixedCategory: "Scholastic",
-        image: "/assets/images/WeLoveMovies.jpg",
-        background: "/assets/images/WeLoveMoviesHero.jpg",
+        image: "/assets/images/WeLoveMovies.png",
+        background: "/assets/images/WeLoveMoviesHero.png",
         headline:
             "An Express API Built to Support a Web Application for Documenting Movie Showtimes and Reviews",
         text: [
@@ -58,16 +58,16 @@ const Works = [
         repository: "https://github.com/djdenney/WeLoveMovies",
         deployment:
             "https://backend-we-love-movies-a7joxuhag-djdenney.vercel.app/movies",
-        imagesLeft: ["PeriodicTables1.jpg", "PeriodicTables3.jpg"],
-        imagesRight: ["PeriodicTables2.jpg", "PeriodicTables4.jpg"],
+        imagesLeft: ["WeLoveMovies1.png", "WeLoveMovies3.png"],
+        imagesRight: ["WeLoveMovies2.png", "WeLoveMovies4.png"],
     },
     {
         id: 4,
         name: "Pomodoro Timer",
         category: "Scholastic",
         fixedCategory: "Scholastic",
-        image: "/assets/images/PomodoroTimer.jpg",
-        background: "/assets/images/PomodoroTimerHero.jpg",
+        image: "/assets/images/PomodoroTimer.png",
+        background: "/assets/images/PomodoroTimerHero.png",
         headline:
             "A Web Application for Creating and Reviewing Study Materials",
         text: [
@@ -78,8 +78,28 @@ const Works = [
         technology: ["HTML", "Bootstrap", "JavaScript"],
         repository: "https://www.github.com/djdenney/Pomodoro_Timer",
         deployment: "https://djdenney.github.io/Pomodoro_Timer/",
-        imagesLeft: ["PomodoroTimer1.jpg", "PomodoroTimer3.jpg"],
-        imagesRight: ["PomodoroTimer2.jpg", "PomodoroTimer4.jpg"],
+        imagesLeft: ["PomodoroTimer1.png", "PomodoroTimer3.png", "PomodoroTimer5.png"],
+        imagesRight: ["PomodoroTimer2.png", "PomodoroTimer4.png", "PomodoroTimer6.png"],
+    },
+    {
+        id: 5,
+        name: "GrubDash",
+        category: "Scholastic",
+        fixedCategory: "Scholastic",
+        image: "/assets/images/GrubDash.png",
+        background: "/assets/images/GrubDashHero.png",
+        headline:
+            "An Express API to support a Web Application used by delivery drivers",
+        text: [
+            "This was a formative backend project for Thinkful.com's 'Software Engineering Flex' curriculum",
+            "The goal of this project was to create a backend API that returns JSON data from local files. This Project is not connected to a database.",
+        ],
+        date: "March 2021",
+        technology: ["Node", "Express"],
+        repository: "https://www.github.com/djdenney/GrubDash",
+        deployment: "",
+        imagesLeft: ["GrubDash1.png", "GrubDash3.png"],
+        imagesRight: ["GrubDash2.png", "GrubDash4.png"],
     },
 ];
 

@@ -9,9 +9,9 @@ const FormSuccess = () => {
             <p className="sub-title">
                 You completed the form correctly.
                 <br />
-                This form supports field validation, but it'll need
+                When I get around to it I'll get back to you.
                 <br />
-                some backend to actually send emails.
+                Should be pretty quick.
             </p>
         </div>
     );
