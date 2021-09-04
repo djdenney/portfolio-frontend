@@ -90,6 +90,7 @@ function SingleWork() {
                     </ul>
                 </div>
                 <WorkLinks
+                    from={"SingleWork"}
                     repository={thisWork.repository}
                     deployment={thisWork.deployment}
                 />
