@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { motion } from "framer-motion";
 
 import Hero from "../components/Hero";
 import Header from "../components/Header";
@@ -14,7 +13,6 @@ function Home() {
     let titleAnim = useRef(null);
     let subtitleAnim = useRef(null);
     let tl = gsap.timeline();
-    const LoadingTransition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
 
     useEffect(() => {
         tl.from(subtitleAnim, {
@@ -40,13 +38,6 @@ function Home() {
 
     return (
         <div>
-            <motion.div
-                initial={{ x: 0 }}
-                animate={{ x: "-100%" }}
-                exit={{ x: 0 }}
-                transition={LoadingTransition}
-                className="page-trans"
-            ></motion.div>
             <Header />
             <Hero>
                 <h6 ref={(el) => (subtitleAnim = el)} className="sub-title">

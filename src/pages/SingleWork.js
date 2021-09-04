@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { gsap } from "gsap";
-import { motion } from "framer-motion";
 
 import Hero from "../components/Hero";
 import Header from "../components/Header";
@@ -19,7 +18,6 @@ function SingleWork() {
     let titleAnim = useRef(null);
     let subtitleAnim = useRef(null);
     let tl = gsap.timeline();
-    const LoadingTransition = { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] };
 
     useEffect(() => {
         tl.from(".single-project-hero", {
@@ -46,20 +44,13 @@ function SingleWork() {
                 duration: 0.5,
                 ease: "power3.inOut",
             });
-    }, [titleAnim, subtitleAnim]);
+    }, [tl, titleAnim, subtitleAnim]);
 
     const { workId } = useParams();
     const thisWork = Works.find((element) => element.id == workId);
 
     return (
         <div>
-            <motion.div
-                initial={{ x: 0 }}
-                animate={{ x: "-100%" }}
-                exit={{ x: 0 }}
-                transition={LoadingTransition}
-                className="page-trans"
-            ></motion.div>
             <Header />
             <Hero
                 background={thisWork.background}

@@ -139,6 +139,53 @@ a {
     }
 }
 
+.alt-link {
+    transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+    position: relative;
+    @media (max-width: 567px) {
+        font-size: 0.9em;
+    }
+    &:after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background: #faf33e;
+        position: absolute;
+        left: 0;
+        right: auto;
+        bottom: -3px;
+        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+    }
+    &:hover {
+        color: #eefcee !important;
+        outline: 0;
+        text-decoration: none;
+        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        &:after {
+            width: 0%;
+            right: 0;
+            left: auto;
+            transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        }
+    }
+    &:focus {
+        outline: 0;
+        text-decoration: none;
+    }
+    &.active {
+        color: #eefcee !important;
+        outline: 0;
+        text-decoration: none;
+        transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        &:after {
+            width: 100%;
+            right: auto;
+            left: 0;
+            transition: 0.25s cubic-bezier(0.75, 0.25, 0.25, 0.75);
+        }
+    }
+}
+
 .loading-overlay {
     position: fixed;
     top: 0;

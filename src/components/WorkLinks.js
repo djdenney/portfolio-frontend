@@ -16,7 +16,7 @@ function WorkLinks(props) {
                     </li>
                     <li>
                         <a
-                            href={props.deployment}
+                            to={props.deployment}
                             target="_blank"
                             rel="noreferrer"
                         >

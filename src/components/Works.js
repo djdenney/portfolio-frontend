@@ -34,12 +34,13 @@ function Works() {
         setProjects(worksUpdated);
     }, [filter]);
 
-    const worksFilters = ["All", "Scholastic", "Independent", "Enterprise"];
     const displayWorks = projects.map((item, i) => (
         <WorkItem
             key={i}
             title={item.name}
             category={item.category}
+            repository={item.repository}
+            deployment={item.deployment}
             image={item.image}
             id={item.id}
         />
@@ -51,20 +52,6 @@ function Works() {
                 <h2 className="anim-bot big-title">
                     Here are Some Things I Made.
                 </h2>
-
-                <nav className="nav portfolio-nav anim-bot">
-                    {worksFilters.map((item, i) => (
-                        <a
-                            key={i}
-                            className={`nav-item ${
-                                filter === item ? "active" : null
-                            }`}
-                            onClick={() => setFilter(item)}
-                        >
-                            {item}
-                        </a>
-                    ))}
-                </nav>
 
                 <div className="row portfolio-row anim-bot-big">
                     {displayWorks}
