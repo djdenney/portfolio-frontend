@@ -97,7 +97,7 @@ const Works = [
         date: "March 2021",
         technology: ["Node", "Express"],
         repository: "https://www.github.com/djdenney/GrubDash",
-        deployment: "",
+        deployment: "https://grubdash-frontend.vercel.app/",
         imagesLeft: ["GrubDash1.png", "GrubDash3.png"],
         imagesRight: ["GrubDash2.png", "GrubDash4.png"],
     },
