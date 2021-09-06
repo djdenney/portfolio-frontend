@@ -89,7 +89,7 @@ const Works = [
         image: "/assets/images/GrubDash.png",
         background: "/assets/images/GrubDashHero.png",
         headline:
-            "An Express API to support a Web Application used by delivery drivers",
+            "An Express API to support a Web Application used to order food",
         text: [
             "This was a formative backend project for Thinkful.com's 'Software Engineering Flex' curriculum",
             "The goal of this project was to create a backend API that returns JSON data from local files. This Project is not connected to a database.",
@@ -100,6 +100,26 @@ const Works = [
         deployment: "https://grubdash-frontend.vercel.app/",
         imagesLeft: ["GrubDash1.png", "GrubDash3.png"],
         imagesRight: ["GrubDash2.png", "GrubDash4.png"],
+    },
+    {
+        id: 6,
+        name: "Decoder Ring",
+        category: "Scholastic",
+        fixedCategory: "Scholastic",
+        image: "/assets/images/DecoderRing.png",
+        background: "/assets/images/DecoderRingHero.png",
+        headline:
+            "A React Web Application used to encode and decode messages",
+        text: [
+            "This was a formative JavaScript project for Thinkful.com's 'Software Engineering Flex' curriculum",
+            "The goal of this project was to make use of JavaScript methods to manipulate data.",
+        ],
+        date: "March 2021",
+        technology: ["Javascript", "HTML", "CSS"],
+        repository: "https://www.github.com/djdenney/Decoder_Ring",
+        deployment: "https://djdenney.github.io/Decoder_Ring/",
+        imagesLeft: ["DecoderRing1.png", "DecoderRing3.png"],
+        imagesRight: ["DecoderRing2.png", "DecoderRing4.png"],
     },
 ];
 
